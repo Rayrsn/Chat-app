@@ -8,10 +8,6 @@ use rocket::serde::{Serialize, Deserialize};
 use rocket::tokio::sync::broadcast::{channel, Sender, error::RecvError};
 use rocket::tokio::select;
 
-#[get("/world")]
-fn world() -> &'static str{
-    "Hello, world!"
-}
 
 #[derive(Debug,Clone,FromForm,Serialize,Deserialize)]
 #[serde(crate = "rocket::serde")]
